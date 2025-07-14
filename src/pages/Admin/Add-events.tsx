@@ -115,4 +115,3 @@ const AddEventForm = () => {
 
 export default AddEventForm;
 {/* admin here */}
-{/*  commands*/}
