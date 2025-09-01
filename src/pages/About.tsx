@@ -104,7 +104,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              About <span className="bg-gradient-cyber bg-clip-text text-transparent">LBSCEK</span>
+              Upcoming events <span className="bg-gradient-cyber bg-clip-text text-transparent">of Cyber community</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Empowering the future of cybersecurity through education, innovation, and community collaboration.

@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Users, ArrowRight, Code, Shield, Lightbulb, Eye } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const EventsSection = () => {
+const Upcoming = () => {
   const navigate = useNavigate();
 
   const mainEvents = [
@@ -27,24 +27,8 @@ const EventsSection = () => {
       participants: "50+",
       category: "Innovation"
     },
-    {
-      id: "hack-the-weeks",
-      title: "Hack Your First Website (Legally!)",
-      description: "Weekly hacking challenges and CTF competitions for skill development",
-      icon: Code,
-      date: "March 1, 2025",
-      participants: "Multiple",
-      category: "Competition"
-    },
-    {
-      id: "dark-web",
-      title: "Dark Web",
-      description: "Educational sessions on dark web monitoring and threat intelligence",
-      icon: Eye,
-      date: "Monthly",
-      participants: "40+",
-      category: "Education"
-    }
+    
+    
   ];
 
   const allEvents = [
@@ -74,12 +58,12 @@ const EventsSection = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-subtle">
+    <section className="py-3 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our <span className="bg-gradient-cyber bg-clip-text text-transparent">Past Events</span>
-          </h2>
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Upcoming events <span className="bg-gradient-cyber bg-clip-text text-transparent">of Cyber community</span>
+            </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Join our dynamic cybersecurity events and workshops designed to enhance your skills 
             and connect with the community.
@@ -172,4 +156,4 @@ const EventsSection = () => {
   );
 };
 
-export default EventsSection; 
+export default Upcoming; 

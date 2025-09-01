@@ -1,124 +1,198 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { 
-  BookOpen, 
+  Shield, 
+  Target, 
+  Lightbulb, 
+  Zap, 
   Users, 
-  Trophy, 
-  Calendar,
-  ArrowRight,
-  Code2,
-  Shield,
-  Network
+  Award, 
+  BookOpen, 
+  Globe,
+  Code,
+  Lock,
+  Eye,
+  Brain
 } from "lucide-react";
 
 const ServicesSection = () => {
-  const services = [
+  const mission = {
+    title: "Our Mission",
+    description: "To empower the next generation of cybersecurity professionals through comprehensive education, hands-on training, and community collaboration. We strive to bridge the gap between academic learning and real-world cybersecurity challenges.",
+    icon: Target
+  };
+
+  const vision = {
+    title: "Our Vision",
+    description: "To become the leading cybersecurity education hub that produces industry-ready professionals capable of defending against evolving digital threats and driving innovation in cybersecurity practices.",
+    icon: Eye
+  };
+
+  const values = [
     {
-      icon: BookOpen,
-      title: "Training Programs",
-      description: "Comprehensive courses covering ethical hacking, network security, and incident response.",
-      features: ["Beginner to Advanced", "Certified Instructors", "Hands-on Labs"]
+      icon: Shield,
+      title: "Excellence",
+      description: "Maintaining the highest standards in cybersecurity education and practice"
     },
     {
       icon: Users,
-      title: "Workshops & Seminars",
-      description: "Regular interactive sessions with industry experts and cybersecurity professionals.",
-      features: ["Industry Experts", "Interactive Sessions", "Q&A Support"]
+      title: "Collaboration",
+      description: "Fostering a supportive community where knowledge sharing thrives"
     },
     {
-      icon: Trophy,
-      title: "Competitions",
-      description: "CTF challenges, hackathons, and security competitions to test and improve skills.",
-      features: ["CTF Challenges", "Team Events", "Prize Rewards"]
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "Encouraging creative solutions to emerging security challenges"
     },
     {
-      icon: Calendar,
-      title: "Events & Meetups",
-      description: "Regular community gatherings, tech talks, and networking opportunities.",
-      features: ["Monthly Meetups", "Guest Speakers", "Networking"]
+      icon: Lock,
+      title: "Integrity",
+      description: "Upholding ethical practices and responsible disclosure"
     }
   ];
 
-  const technologies = [
-    { icon: Code2, name: "Penetration Testing" },
-    { icon: Shield, name: "Incident Response" },
-    { icon: Network, name: "Network Security" },
+  const achievements = [
+    {
+      year: "2024",
+      title: "Regional Cybersecurity Champions",
+      description: "Won first place in the National Cybersecurity Competition"
+    },
+    {
+      year: "2023",
+      title: "Innovation Award",
+      description: "Recognized for developing novel penetration testing methodologies"
+    },
+    {
+      year: "2023",
+      title: "Community Impact",
+      description: "Trained 500+ students in cybersecurity fundamentals"
+    },
+    {
+      year: "2022",
+      title: "Research Excellence",
+      description: "Published 3 papers on emerging cybersecurity threats"
+    }
+  ];
+
+  const programs = [
+    {
+      icon: Code,
+      title: "Ethical Hacking",
+      description: "Comprehensive training in penetration testing and vulnerability assessment"
+    },
+    {
+      icon: Brain,
+      title: "Digital Forensics",
+      description: "Hands-on experience with digital evidence collection and analysis"
+    },
+    {
+      icon: Globe,
+      title: "Network Security",
+      description: "Advanced network defense and monitoring techniques"
+    },
+    {
+      icon: BookOpen,
+      title: "Security Research",
+      description: "Cutting-edge research in emerging cybersecurity threats"
+    }
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-3 bg-background">
       <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our <span className="bg-gradient-cyber bg-clip-text text-transparent">Services</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive cybersecurity education and community activities designed to 
-            build expertise and foster professional growth.
-          </p>
-        </div>
+        
+        
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card 
-              key={index}
-              className="bg-cyber-card border-cyber-border hover:shadow-card-cyber transition-all duration-300 group animate-fade-in"
-              style={{ animationDelay: `${index * 0.15}s` }}
-            >
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-cyber group-hover:animate-glow-pulse">
-                      <service.icon className="h-7 w-7 text-cyber-dark" />
-                    </div>
+        {/* Mission & Vision */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Card className="bg-cyber-card/50 border-cyber-border backdrop-blur-sm hover:shadow-card-cyber transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-full bg-gradient-cyber">
+                    <mission.icon className="h-6 w-6 text-cyber-dark" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-foreground mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Button variant="outline" size="sm" className="border-cyber-border hover:bg-cyber-border/20">
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
+                  <CardTitle className="text-2xl">{mission.title}</CardTitle>
                 </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  {mission.description}
+                </p>
               </CardContent>
             </Card>
-          ))}
-        </div>
 
-        {/* Technologies */}
-        <div className="text-center animate-fade-in">
-          <h3 className="text-2xl font-semibold text-foreground mb-8">
-            Specialization Areas
-          </h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {technologies.map((tech, index) => (
-              <div 
-                key={index}
-                className="flex items-center gap-3 px-6 py-3 rounded-full bg-cyber-card border border-cyber-border hover:shadow-cyber transition-all duration-300"
-              >
-                <tech.icon className="h-5 w-5 text-primary" />
-                <span className="text-foreground font-medium">{tech.name}</span>
-              </div>
-            ))}
+            <Card className="bg-cyber-card/50 border-cyber-border backdrop-blur-sm hover:shadow-card-cyber transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-full bg-gradient-cyber">
+                    <vision.icon className="h-6 w-6 text-cyber-dark" />
+                  </div>
+                  <CardTitle className="text-2xl">{vision.title}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  {vision.description}
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
+      </section>
+
+      
+
+      
+      
+
+      
+
+      {/* Community Stats */}
+      <section className="py-3">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Community Impact</h2>
+            <p className="text-xl text-muted-foreground">Numbers that tell our story</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-cyber bg-clip-text text-transparent mb-2">
+                500+
+              </div>
+              <p className="text-muted-foreground">Students Trained</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-cyber bg-clip-text text-transparent mb-2">
+                50+
+              </div>
+              <p className="text-muted-foreground">Workshops Conducted</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-cyber bg-clip-text text-transparent mb-2">
+                25+
+              </div>
+              <p className="text-muted-foreground">Industry Partners</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-cyber bg-clip-text text-transparent mb-2">
+                10+
+              </div>
+              <p className="text-muted-foreground">Awards Won</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       </div>
     </section>
+
+
+
+
   );
 };
 

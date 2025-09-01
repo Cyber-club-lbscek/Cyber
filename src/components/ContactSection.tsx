@@ -46,75 +46,12 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="bg-cyber-card border-cyber-border animate-fade-in">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
-                Send us a Message
-              </h3>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      First Name
-                    </label>
-                    <Input 
-                      placeholder="John" 
-                      className="bg-cyber-dark border-cyber-border focus:border-primary"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Last Name
-                    </label>
-                    <Input 
-                      placeholder="Doe" 
-                      className="bg-cyber-dark border-cyber-border focus:border-primary"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Email
-                  </label>
-                  <Input 
-                    type="email" 
-                    placeholder="john@example.com" 
-                    className="bg-cyber-dark border-cyber-border focus:border-primary"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Subject
-                  </label>
-                  <Input 
-                    placeholder="How can we help?" 
-                    className="bg-cyber-dark border-cyber-border focus:border-primary"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Message
-                  </label>
-                  <Textarea 
-                    placeholder="Tell us more about your inquiry..." 
-                    rows={5}
-                    className="bg-cyber-dark border-cyber-border focus:border-primary resize-none"
-                  />
-                </div>
-                <Button className="w-full bg-gradient-cyber hover:shadow-cyber-glow transition-all duration-300">
-                  <Send className="mr-2 h-5 w-5" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+          
 
           {/* Contact Info */}
           <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-6">
-                Contact Information
-              </h3>
+              
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <Card key={index} className="bg-cyber-card/50 border-cyber-border backdrop-blur-sm">
