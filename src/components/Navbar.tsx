@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../index.css";
 
@@ -11,6 +11,12 @@ const navLinks = [
 
 export default function Navbar() {
   const location = useLocation();
+  const [activeAnchor, setActiveAnchor] = useState("");
+
+  useEffect(() => {
+    setActiveAnchor("");
+  }, [location.pathname]);
+
   return (
     <nav
       style={{
@@ -29,14 +35,25 @@ export default function Navbar() {
             {link.path.startsWith("#") ? (
               <a
                 href={link.path}
+                onClick={e => {
+                  e.preventDefault();
+                  const target = document.querySelector(link.path);
+                  if (target) {
+                    window.scrollTo({
+                      top: target.getBoundingClientRect().top + window.scrollY - 80,
+                      behavior: "smooth"
+                    });
+                  }
+                  setActiveAnchor(link.path);
+                }}
                 style={{
-                  color: "#3F72AF",
-                  fontWeight: 500,
+                  color: activeAnchor === link.path ? "#112D4E" : "#3F72AF",
+                  fontWeight: activeAnchor === link.path ? 700 : 500,
                   fontSize: "1.1rem",
                   padding: "0.5rem 1rem",
                   borderRadius: "0.5rem",
-                  background: "transparent",
-                  boxShadow: "none",
+                  background: activeAnchor === link.path ? "#DBE2EF" : "transparent",
+                  boxShadow: activeAnchor === link.path ? "0 2px 8px #3F72AF22" : "none",
                   transition: "all 0.3s cubic-bezier(0.4,0,0.2,1)"
                 }}
               >
