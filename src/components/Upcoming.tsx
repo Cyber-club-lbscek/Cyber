@@ -58,7 +58,7 @@ const Upcoming = () => {
   };
 
   return (
-    <section className="py-3 bg-gradient-subtle">
+    <section id="upcoming" className="py-3 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
