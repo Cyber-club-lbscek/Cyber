@@ -10,25 +10,25 @@ const Upcoming = () => {
 
   const mainEvents = [
     {
-      id: "one-minute",
-      title: "One Minute Cyber",
-      description: "Quick-fire presentations and lightning talks on cybersecurity topics",
+      id: "hack.ai",
+      title: "Hack.Ai",
+      description: "A Compleate 1 Month Cybersecurity Project Based Learning Program",
       icon: Clock,
-      date: "Bi-weekly",
-      participants: "30+",
-      category: "Presentation"
+      date: "Sept 9- Oct 5, 2025",
+      participants: "50 only",
+      category: "Learning Program",
+      registerLink: "https://forms.gle/DsnUGbPeY7K4mrdW6"
     },
     {
-      id: "innovation-corner",
-      title: "Innovation Corner",
-      description: "Showcase your innovative cybersecurity solutions and research projects",
+      id: "school-awareness",
+      title: "Cybersecurity Awareness in Schools",
+      description: "Cybersecurity Awareness session for Bhovikkanam Higher secondary school students",
       icon: Lightbulb,
-      date: "Monthly",
-      participants: "50+",
-      category: "Innovation"
+      date: "Sept 23",
+      participants: "200+",
+      category: "Awareness Program",
+      registerLink: "https://forms.gle/"
     },
-    
-    
   ];
 
   const allEvents = [
@@ -113,11 +113,25 @@ const Upcoming = () => {
                 </div>
                 <Button 
                   variant="default"
-                  className="w-full mt-6 bg-cyber-green text-white font-bold text-lg shadow-[0_0_16px_4px_rgba(238,238,238,0.5)] hover:bg-cyber-lightgreen hover:text-cyber-dark transition-all duration-300"
+                  className="w-full mt-6 bg-[#06923E] text-white font-bold text-lg shadow-[0_0_16px_4px_rgba(6,146,62,0.4)] hover:bg-[#08CB00] hover:text-cyber-dark transition-all duration-300"
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
+                <a
+                  href={event.registerLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full mt-3"
+                >
+                  <Button
+                    variant="default"
+                    className="w-full bg-[#08CB00] text-white font-bold text-lg shadow-[0_0_16px_4px_rgba(8,203,0,0.3)] hover:bg-[#06923E] hover:text-cyber-dark transition-all duration-300"
+                  >
+                    Register now
+                  </Button>
+                </a>
+                
               </CardContent>
             </Card>
           ))}
