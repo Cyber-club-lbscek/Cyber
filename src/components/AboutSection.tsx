@@ -104,8 +104,8 @@ const About = () => {
       <section className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="text-center animate-fade-in">
-            
-            
+            {/* Add your hero content here */}
+          </div>
         </div>
       </section>
 
