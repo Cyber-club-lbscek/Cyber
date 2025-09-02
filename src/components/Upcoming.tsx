@@ -4,9 +4,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Users, ArrowRight, Code, Shield, Lightbulb, Eye } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import EventDetailModal from "@/components/EventDetailModal";
 
 const Upcoming = () => {
   const navigate = useNavigate();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   const mainEvents = [
     {
@@ -57,6 +61,16 @@ const Upcoming = () => {
     navigate(`/events/${eventId}`);
   };
 
+  const handleLearnMore = (event: any) => {
+    setSelectedEvent(event);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+    setSelectedEvent(null);
+  };
+
   return (
     <section id="upcoming" className="py-3 bg-gradient-subtle">
       <div className="container mx-auto px-6">
@@ -81,7 +95,6 @@ const Upcoming = () => {
             <Card 
               key={index} 
               className="bg-cyber-card border-4 border-cyber-green shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer relative"
-              onClick={() => handleEventSelect(event.id)}
             >
               <div className="absolute -top-4 -right-4 px-4 py-1 rounded-full bg-cyber-green text-cyber-light font-bold text-xs shadow-md animate-pulse">Featured</div>
               <CardHeader className="pb-4">
@@ -114,6 +127,7 @@ const Upcoming = () => {
                 <Button 
                   variant="default"
                   className="w-full mt-6 bg-[#06923E] text-white font-bold text-lg shadow-[0_0_16px_4px_rgba(6,146,62,0.4)] hover:bg-[#08CB00] hover:text-cyber-dark transition-all duration-300"
+                  onClick={() => handleLearnMore(event)}
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -131,14 +145,14 @@ const Upcoming = () => {
                     Register now
                   </Button>
                 </a>
-                
               </CardContent>
             </Card>
           ))}
         </div>
 
         
-      </div>
+  </div>
+  
     </section>
   );
 };

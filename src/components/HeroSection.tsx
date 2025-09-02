@@ -42,14 +42,28 @@ const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" className="bg-gradient-cyber hover:shadow-cyber-glow transition-all duration-300">
-              <Users className="mr-2 h-5 w-5" />
-              Join Community
-            </Button>
-            <Button variant="outline" size="lg" className="border-cyber-border hover:bg-cyber-card/50 backdrop-blur-sm">
+            <a
+              href="https://chat.whatsapp.com/F5sRopBfJBqLVTKvd0EFQn" 
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-block', width: '100%' }}
+            >
+              <Button size="lg" className="bg-gradient-cyber hover:shadow-cyber-glow transition-all duration-300 w-full">
+                <Users className="mr-2 h-5 w-5" />
+                Join Community
+              </Button>
+            </a>
+            <a
+              href="https://github.com/Cyber-club-lbscek" 
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-block', width: '100%' }}
+            >
+            <Button variant="outline" size="lg" className="border-cyber-border hover:bg-cyber-card/50 backdrop-blur-sm w-full">
               <Code className="mr-2 h-5 w-5" />
               Explore Projects
             </Button>
+            </a>
           </div>
         </div>
         
