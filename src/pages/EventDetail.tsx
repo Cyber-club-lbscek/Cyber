@@ -62,7 +62,7 @@ const EventDetail = () => {
       organizers: "Cyber Community, LBSCEK",
       pricing: [
         "Paid Track (Full Access): ₹150 (Offline workshops + mentorship + project review)",
-        "Free Track: Access to online webinars only"
+        // "Free Track: Access to online webinars only"
       ]
     },
     "innovation-corner": {
@@ -70,19 +70,19 @@ const EventDetail = () => {
       description: "Showcase your innovative cybersecurity solutions and research projects",
       longDescription: "Innovation Corner is our premier platform for showcasing cutting-edge cybersecurity innovations. Participants present their research projects, novel security solutions, and breakthrough technologies to the community. This event fosters collaboration between researchers, students, and industry professionals.",
       icon: Lightbulb,
-      date: "Monthly",
-      time: "2:00 PM - 5:00 PM",
-      location: "LBSCEK Lab",
-      participants: "50+",
+      date: "27 & 28February 2025",
+      time: "9:00 AM - 5:00 PM",
+      location: "IEDC Room , LBSCEK",
+      participants: "200+",
       category: "Innovation",
-      requirements: ["Cybersecurity background", "Project proposal", "5-minute presentation"],
+      requirements: ["Compleatly Beginner","Cybersecurity backgroun"],
       benefits: ["Network with professionals", "Get feedback on projects", "Potential collaboration opportunities"],
       schedule: [
         { time: "2:00 PM", activity: "Opening & Introductions" },
-        { time: "2:15 PM", activity: "Project Presentations" },
-        { time: "3:30 PM", activity: "Networking Break" },
-        { time: "4:00 PM", activity: "Q&A & Discussion" },
-        { time: "4:45 PM", activity: "Closing & Next Steps" }
+        { time: "2:15 PM", activity: "" },
+        { time: "3:30 PM", activity: "" },
+        { time: "4:00 PM", activity: "" },
+        { time: "4:45 PM", activity: "" }
       ]
     },
     "hack-the-weeks": {
@@ -237,9 +237,9 @@ const EventDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#181818]">
       {/* Header */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20" style={{ background: '#181818' }}>
         <div className="container mx-auto px-6">
           <Button 
             variant="ghost" 
@@ -324,8 +324,8 @@ const EventDetail = () => {
         </div>
       </section>
 
-      {/* Event Details */}
-      <section className="py-16">
+  {/* Event Details */}
+  <section className="py-16" style={{ background: '#181818' }}>
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Content */}
