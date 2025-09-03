@@ -23,6 +23,48 @@ const EventDetail = () => {
   const navigate = useNavigate();
 
   const events = {
+    "hack.ai": {
+      title: "Hack.Ai – Cybersecurity + AI Project-Based Learning Program",
+      description: "1-month, project-based cybersecurity and AI training program for hands-on security builders.",
+      longDescription: `Hack.Ai is a 1-month, project-based cybersecurity and AI training program designed to transform students from beginners into hands-on security builders. This program focuses on real-world attack-defense skills, machine learning in security, and building engineering-level cybersecurity projects with proper mentorship.\n\nUnlike typical workshops or courses, Hack.Ai blends industry-driven training, peer-led learning, and team-based project development to create a developer-first cybersecurity culture in college.`,
+      icon: Shield,
+      date: "September 9 – October 5, 2025",
+      time: "Hybrid (Offline Expert Workshops + Online Webinars)",
+      location: "Cyber Community, LBSCEK",
+      participants: "Open to engineering students",
+      category: "Learning Program",
+      requirements: [
+        "Interest in Cybersecurity, AI, or Software Development",
+        "Beginner-friendly, team-based participation",
+        "Willingness to learn and build from scratch"
+      ],
+      benefits: [
+        "Learn offensive & defensive security like a pro",
+        "Gain industry-level skills in 1 month",
+        "Get trained by certified professionals & peers",
+        "Build a portfolio-worthy project to showcase to recruiters",
+        "Network with industry experts & mentors"
+      ],
+      highlights: [
+        "Hands-on experience with Burp Suite, Wireshark, Snort, ELK Stack, Ghidra, Python, and AI security tools.",
+        "3 Advanced Expert-Led Workshops (3 hours each, offline) with CEH-certified professionals.",
+        "10+ Student-Led Webinars to strengthen fundamentals.",
+        "1 Engineering-Level Cybersecurity Project built in a team and showcased at the final expo."
+      ],
+      schedule: [
+        { time: "Week 1", activity: "Web Security Foundations – Secure coding, Burp Suite, GitHub, API basics" },
+        { time: "Week 2", activity: "API & Frontend Security – API exploitation, XSS, Python security automation" },
+        { time: "Week 3", activity: "Network Security & Threat Intel – IDS, Threat Dashboards, OSINT" },
+        { time: "Week 4", activity: "AI-Powered Security – ML Anomaly Detection, Final Project Dev" }
+      ],
+      engagement: "Teams work on 15 real-world cybersecurity project ideas (e.g., Phishing Detector, Honeypot, Threat Intel Dashboard, ML Firewalls). Mentorship from industry trainers & CEH experts. Final week dedicated to polishing and deploying projects. CyberSprint Expo: Teams present to judges, compete for awards and recognition.",
+      summary: "This is not just training—it’s a launchpad for cybersecurity innovators.",
+      organizers: "Cyber Community, LBSCEK",
+      pricing: [
+        "Paid Track (Full Access): ₹150 (Offline workshops + mentorship + project review)",
+        "Free Track: Access to online webinars only"
+      ]
+    },
     "innovation-corner": {
       title: "Innovation Corner",
       description: "Showcase your innovative cybersecurity solutions and research projects",
@@ -379,6 +421,21 @@ const EventDetail = () => {
 
             {/* Sidebar */}
             <div className="space-y-6">
+              {/* Pricing for Hack.Ai */}
+              {eventId === "hack.ai" && (
+                <Card className="bg-cyber-card/50 border-cyber-border backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-xl">Pricing</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {events["hack.ai"].pricing.map((price: string, idx: number) => (
+                        <li key={idx} className="text-muted-foreground text-sm">{price}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              )}
               <Card className="bg-cyber-card/50 border-cyber-border backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-xl">Requirements</CardTitle>

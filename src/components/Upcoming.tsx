@@ -127,7 +127,7 @@ const Upcoming = () => {
                 <Button 
                   variant="default"
                   className="w-full mt-6 bg-[#06923E] text-white font-bold text-lg shadow-[0_0_16px_4px_rgba(6,146,62,0.4)] hover:bg-[#08CB00] hover:text-cyber-dark transition-all duration-300"
-                  onClick={() => handleLearnMore(event)}
+                  onClick={() => handleEventSelect(event.id)}
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-5 w-5" />
