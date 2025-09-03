@@ -133,7 +133,8 @@ const cardVariants: Variants = {
 
 const TeamSection = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  // Trigger animation when at least 10% of section is visible
+  const [ref, inView] = useInView({ threshold: 0.1 });
 
   useEffect(() => {
     if (inView) {
@@ -144,7 +145,7 @@ const TeamSection = () => {
   }, [inView, controls]);
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+  <section className="py-20 relative overflow-hidden" style={{ background: '#0F0E0E' }}>
       <div className="container mx-auto px-6" ref={ref}>
         {/* Section Header */}
         <motion.div
@@ -168,7 +169,7 @@ const TeamSection = () => {
 
         {/* Team Grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
           variants={containerVariants}
           initial="hidden"
           animate={controls}
@@ -177,42 +178,40 @@ const TeamSection = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              whileHover={{ scale: 1.08, rotateY: 5, rotateX: 5 }}
+              whileHover={{ boxShadow: "0 4px 24px rgba(44,167,248,0.10)", y: -2 }}
               className="group"
             >
-              <Card className="relative overflow-hidden bg-gradient-to-b from-background/50 to-background/20 border border-primary/30 hover:border-primary/70 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-6 flex flex-col items-center text-center space-y-4">
+              <Card className="relative overflow-hidden bg-gradient-to-b from-background/60 to-background/10 border border-primary/30 hover:border-primary/70 rounded-2xl shadow-lg transition-all duration-300 w-full max-w-xs mx-auto">
+                <CardContent className="p-4 flex flex-col items-center text-center space-y-2">
                   {/* Profile Image */}
                   <div className="relative">
-                    <motion.img
+                    <img
                       src={member.image}
                       alt={member.name}
-                      className="w-24 h-24 rounded-full border-4 border-primary/50 object-cover shadow-lg"
-                      whileHover={{ scale: 1.1, rotate: 3 }}
-                      transition={{ type: "spring", stiffness: 300 }}
+                      className="w-16 h-16 rounded-full border-2 border-primary/50 object-cover shadow-lg"
                     />
-                    <div className="absolute inset-0 rounded-full border-2 border-primary/30 blur-md opacity-60 group-hover:opacity-90 transition duration-300"></div>
+                    <div className="absolute inset-0 rounded-full border border-primary/30 blur-md opacity-60 group-hover:opacity-90 transition duration-300"></div>
                   </div>
 
                   {/* Name & Role */}
                   <div>
-                    <h3 className="text-lg font-semibold text-foreground">
+                    <h3 className="text-base font-semibold text-foreground group-hover:text-primary group-hover:shadow-lg transition-all duration-300">
                       {member.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground mt-1">
+                    <p className="text-xs text-muted-foreground mt-1">
                       {member.role}
                     </p>
                   </div>
 
                   {/* Social Links */}
-                  <div className="flex gap-4 mt-2">
+                  <div className="flex gap-2 mt-1">
                     <a
                       href={member.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-white transition-transform transform hover:scale-110"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="w-4 h-4" />
                     </a>
                     <a
                       href={member.linkedin}
@@ -220,7 +219,7 @@ const TeamSection = () => {
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-[#0077b5] transition-transform transform hover:scale-110"
                     >
-                      <Linkedin className="w-5 h-5" />
+                      <Linkedin className="w-4 h-4" />
                     </a>
                   </div>
                 </CardContent>

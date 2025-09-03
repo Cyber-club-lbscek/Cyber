@@ -22,7 +22,7 @@ const EventDetailModal: React.FC<EventDetailModalProps> = ({ open, onClose, even
     <Dialog open={open} onOpenChange={onClose}>
       <div className="p-8 max-w-lg mx-auto bg-cyber-card rounded-2xl shadow-2xl">
         <div className="flex items-center gap-4 mb-4">
-          <div className="p-3 rounded-full bg-gradient-cyber">
+          <div className="p-3 rounded-full">
             <Icon className="h-8 w-8 text-cyber-green" />
           </div>
           <h2 className="text-3xl font-bold text-cyber-green">{event.title}</h2>

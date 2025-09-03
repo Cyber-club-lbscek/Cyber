@@ -4,7 +4,7 @@ import heroImage from "@/assets/cyber-hero.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#0F0E0E' }}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
@@ -48,7 +48,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               style={{ display: 'inline-block', width: '100%' }}
             >
-              <Button size="lg" className="bg-gradient-cyber hover:shadow-cyber-glow transition-all duration-300 w-full">
+              <Button size="lg" className="bg-gradient-cyber hover:shadow-cyber-glow transition-all duration-300 ">
                 <Users className="mr-2 h-5 w-5" />
                 Join Community
               </Button>
@@ -59,7 +59,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               style={{ display: 'inline-block', width: '100%' }}
             >
-            <Button variant="outline" size="lg" className="border-cyber-border hover:bg-cyber-card/50 backdrop-blur-sm w-full">
+            <Button variant="outline" size="lg" className="border-cyber-border hover:bg-cyber-card/50 backdrop-blur-sm ">
               <Code className="mr-2 h-5 w-5" />
               Explore Projects
             </Button>
