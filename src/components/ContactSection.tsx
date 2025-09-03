@@ -2,34 +2,61 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Send, Github, Linkedin, Instagram, Users, Link } from "lucide-react";
 
 const ContactSection = () => {
   const contactInfo = [
     {
+      icon: Users,
+      title: "WhatsApp Community",
+      value: "Join our WhatsApp Community",
+      description: "Connect with us on WhatsApp",
+      link: "https://chat.whatsapp.com/F5sRopBfJBqLVTKvd0EFQn"
+    },
+    {
+      icon: Link,
+      title: "WhatsApp Channel",
+      value: "Follow our WhatsApp Channel",
+      description: "Stay updated via WhatsApp Channel",
+      link: "https://whatsapp.com/channel/0029VaA9wQe9qLKvQKjQyU2v"
+    },
+    {
+      icon: Instagram,
+      title: "Instagram",
+      value: "@cyberclub_lbscek",
+      description: "Follow us on Instagram",
+      link: "https://instagram.com/cyberclub_lbscek"
+    },
+    {
+      icon: Github,
+      title: "GitHub",
+      value: "Cyber-club-lbscek",
+      description: "Explore our projects",
+      link: "https://github.com/Cyber-club-lbscek"
+    },
+    {
+      icon: Linkedin,
+      title: "LinkedIn",
+      value: "Cyber Club LBSCEK",
+      description: "Connect on LinkedIn",
+      link: "https://linkedin.com/company/cyber-club-lbscek"
+    },
+    {
       icon: Mail,
       title: "Email",
-      value: "contact@lbscek.edu",
-      description: "Get in touch with us"
-    },
-    {
-      icon: MapPin,
-      title: "Location",
-      value: "LBSCEK Campus",
-      description: "Visit our cyber lab"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "+91 XXX XXX XXXX",
-      description: "Call us directly"
+      value: "cyberclublbscek@gmail.com",
+      description: "Email us directly",
+      link: "mailto:cyberclublbscek@gmail.com"
     }
   ];
 
   const socialLinks = [
-    { icon: Github, name: "GitHub", href: "#" },
-    { icon: Linkedin, name: "LinkedIn", href: "#" },
-    { icon: Twitter, name: "Twitter", href: "#" },
+    { icon: Users, name: "WhatsApp Community", href: "https://chat.whatsapp.com/F5sRopBfJBqLVTKvd0EFQn" },
+    { icon: Link, name: "WhatsApp Channel", href: "https://whatsapp.com/channel/0029VaA9wQe9qLKvQKjQyU2v" },
+    { icon: Instagram, name: "Instagram", href: "https://instagram.com/cyberclub_lbscek" },
+    { icon: Github, name: "GitHub", href: "https://github.com/Cyber-club-lbscek" },
+    { icon: Linkedin, name: "LinkedIn", href: "https://linkedin.com/company/cyber-club-lbscek" },
+    { icon: Mail, name: "Email", href: "mailto:cyberclublbscek@gmail.com" },
   ];
 
   return (
@@ -67,7 +94,7 @@ const ContactSection = () => {
                             {info.title}
                           </h4>
                           <p className="text-primary font-medium mb-1">
-                            {info.value}
+                            <a href={info.link} target="_blank" rel="noopener noreferrer">{info.value}</a>
                           </p>
                           <p className="text-sm text-muted-foreground">
                             {info.description}

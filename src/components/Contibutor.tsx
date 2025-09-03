@@ -26,29 +26,28 @@ const ContributorsSection = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#212121' }}>
+  <section className="py-8 relative overflow-hidden" style={{ backgroundColor: '#212121' }}>
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
             Website{" "}
             <span className="bg-gradient-cyber bg-clip-text text-transparent">
               Contributors
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Meet the amazing team of developers and designers behind this
-            project.
+          <p className="text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
+            Meet the team behind this project.
           </p>
         </motion.div>
 
         
-        <div className="flex flex-wrap justify-center gap-8">
+  <div className="flex flex-wrap justify-center gap-3">
           {contributors.map((person, index) => (
             <motion.div
               key={index}
@@ -63,13 +62,13 @@ const ContributorsSection = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-cyber-card border-cyber-border hover:shadow-cyber transition-all duration-300 w-64">
-                <CardContent className="p-6 flex flex-col items-center relative">
+              <Card className="bg-cyber-card border-cyber-border hover:shadow-cyber transition-all duration-300 w-36">
+                <CardContent className="p-2 flex flex-col items-center relative">
                   {/* Glowing animated ring */}
-                  <div className="relative w-24 h-24 mb-4">
+                  <div className="relative w-12 h-12 mb-2">
                     <div className="absolute inset-0 rounded-full border-2 border-primary animate-ping opacity-50"></div>
                     <div className="absolute inset-0 rounded-full border border-primary/50 blur-sm"></div>
-                    <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-cyber-border shadow-md">
+                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-cyber-border shadow-md">
                       <img
                         src={person.image}
                         alt={person.name}
@@ -79,10 +78,10 @@ const ContributorsSection = () => {
                   </div>
 
                   {/* Contributor Name */}
-                  <h3 className="text-lg font-semibold text-foreground">
+                  <h3 className="text-sm font-semibold text-foreground">
                     {person.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-xs text-muted-foreground mb-2">
                     {person.MailId}
                   </p>
 
@@ -91,9 +90,9 @@ const ContributorsSection = () => {
                     href={person.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-primary hover:underline text-sm"
+                    className="flex items-center gap-1 text-primary hover:underline text-xs"
                   >
-                    <Github className="w-4 h-4" /> GitHub
+                    <Github className="w-3 h-3" /> GitHub
                   </a>
                 </CardContent>
               </Card>
