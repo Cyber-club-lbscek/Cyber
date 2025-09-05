@@ -12,9 +12,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <HeroSection />
       <Upcoming />
-      <div id="events">
+      {/* <div id="events">
         <EventsSection />
-      </div>
+      </div> */}
       <TeamSection />
       <Test />
       {/* <ServicesSection /> */}
