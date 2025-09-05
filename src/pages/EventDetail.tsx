@@ -504,12 +504,14 @@ const EventDetail = () => {
                   <CardTitle className="text-xl">Register Now</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full bg-gradient-cyber text-cyber-dark hover:shadow-card-cyber">
-                    <Zap className="mr-2 h-4 w-4" />
-                    Join This Event
-                  </Button>
+                  <a href="https://makemypass.com/event/hack-ai" target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+                    <Button className="w-full bg-gradient-cyber text-cyber-dark hover:shadow-card-cyber">
+                      <Zap className="mr-2 h-4 w-4" />
+                      Join This Event
+                    </Button>
+                  </a>
                   <p className="text-sm text-muted-foreground mt-2 text-center">
-                    Registration is free for LBSCEK members
+                    {/* Registration is free for LBSCEK members */}
                   </p>
                 </CardContent>
               </Card>

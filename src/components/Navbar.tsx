@@ -39,10 +39,12 @@ export default function Navbar() {
                   e.preventDefault();
                   const target = document.querySelector(link.path);
                   if (target) {
+                    const navbarHeight = document.querySelector('nav')?.offsetHeight || 80;
                     window.scrollTo({
-                      top: target.getBoundingClientRect().top + window.scrollY - 80,
+                      top: target.getBoundingClientRect().top + window.scrollY - navbarHeight,
                       behavior: "smooth"
                     });
+                    window.location.hash = link.path;
                   }
                   setActiveAnchor(link.path);
                 }}

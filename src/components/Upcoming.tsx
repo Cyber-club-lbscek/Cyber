@@ -21,7 +21,8 @@ const Upcoming = () => {
       date: "Sept 9- Oct 5, 2025",
       participants: "50 only",
       category: "Learning Program",
-      registerLink: "https://makemypass.com/event/hack-ai"
+      registerLink: "https://makemypass.com/event/hack-ai",
+      brochureLink: "https://drive.google.com/uc?export=download&id=1Z98OckaQYMlzhnnCzr2lr_popKMrEsnQ"
     },
     {
       id: "school-awareness",
@@ -143,6 +144,20 @@ const Upcoming = () => {
                     className="w-full bg-[#08CB00] text-white font-bold text-lg shadow-[0_0_16px_4px_rgba(8,203,0,0.3)] hover:bg-[#06923E] hover:text-cyber-dark transition-all duration-300"
                   >
                     Register now
+                  </Button>
+                </a>
+
+                <a
+                  href={event.brochureLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full mt-3"
+                >
+                  <Button
+                    variant="default"
+                    className="w-full bg-[#06923E] text-white font-bold text-lg shadow-[0_0_16px_4px_rgba(8,203,0,0.3)] hover:bg-[#06923E] hover:text-cyber-dark transition-all duration-300"
+                  >
+                    Download Brochure
                   </Button>
                 </a>
               </CardContent>
