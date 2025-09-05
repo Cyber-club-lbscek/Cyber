@@ -21,7 +21,7 @@ const Upcoming = () => {
       date: "Sept 9- Oct 5, 2025",
       participants: "50 only",
       category: "Learning Program",
-      registerLink: "https://forms.gle/DsnUGbPeY7K4mrdW6"
+      registerLink: "https://makemypass.com/event/hack-ai"
     },
     {
       id: "school-awareness",
