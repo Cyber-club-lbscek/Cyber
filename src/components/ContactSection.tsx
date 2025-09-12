@@ -25,7 +25,7 @@ const ContactSection = () => {
       title: "Instagram",
       value: "@cyberclub_lbscek",
       description: "Follow us on Instagram",
-      link: "https://instagram.com/cyberclub_lbscek"
+      link: "https://www.instagram.com/cyber_community.lbscek/?utm_source=qr&igsh=dDl1NXh3aDE5cjQz#"
     },
     {
       icon: Github,
@@ -44,19 +44,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "cyberclublbscek@gmail.com",
+      value: "cyber.club.lbscek@gmail.com",
       description: "Email us directly",
-      link: "mailto:cyberclublbscek@gmail.com"
+      link: "mailto:cyber.club.lbscek@gmail.com"
     }
   ];
 
   const socialLinks = [
     { icon: Users, name: "WhatsApp Community", href: "https://chat.whatsapp.com/F5sRopBfJBqLVTKvd0EFQn" },
     { icon: Link, name: "WhatsApp Channel", href: "https://whatsapp.com/channel/0029VaA9wQe9qLKvQKjQyU2v" },
-    { icon: Instagram, name: "Instagram", href: "https://instagram.com/cyberclub_lbscek" },
+    { icon: Instagram, name: "Instagram", href: "https://www.instagram.com/cyber_community.lbscek/?utm_source=qr&igsh=dDl1NXh3aDE5cjQz#" },
     { icon: Github, name: "GitHub", href: "https://github.com/Cyber-club-lbscek" },
     { icon: Linkedin, name: "LinkedIn", href: "https://linkedin.com/company/cyber-club-lbscek" },
-    { icon: Mail, name: "Email", href: "mailto:cyberclublbscek@gmail.com" },
+    { icon: Mail, name: "Email", href: "mailto:cyber.club.lbscek@gmail.com" },
   ];
 
   return (
